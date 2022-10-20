@@ -29,7 +29,7 @@ class DeadlinedReminder(Iterable, ABC):
 
 class DateReminder(DeadlinedReminder):
     
-    def __init__(self, date, text) -> None:
+    def __init__(self, text, date) -> None:
         self.date = parse(date, dayfirst=True)
         self.text = text
 

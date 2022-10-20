@@ -18,7 +18,7 @@ def list_reminders():
 def add_reminder(text, date, ReminderClass):
     reminder = ReminderClass(date=date, text=text)
     if not isinstance(reminder, DeadlinedReminder):
-        raise TypeError
+        raise TypeError('Invalid Reminder Class')
     
     with open('reminders.csv', 'a+', newline='\n') as file:
         writer = csv.writer(file)
